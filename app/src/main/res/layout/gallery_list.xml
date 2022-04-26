@@ -7,54 +7,63 @@
     android:padding="19dp"
     tools:background="@color/black">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/galleryListCardView"
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:cardBackgroundColor="@color/black">
+        android:columnCount="4"
+        >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/galleryListViewSecondLine"
+                android:layout_width="87dp"
+                android:layout_height="115dp"
+                tools:background="@color/white"
+
+                    />
+
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/galleryListViewFirstLine"
             android:layout_width="87dp"
             android:layout_height="115dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
             tools:background="@color/white" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/galleryListViewSecondLine"
-            android:layout_width="87dp"
-            android:layout_marginStart="95dp"
-            android:layout_height="115dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:background="@color/white" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/galleryListViewThirdLine"
-            android:layout_width="87dp"
-            android:layout_marginStart="190dp"
-            android:layout_height="115dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:background="@color/white" />
+    </GridLayout>
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/galleryListViewFourthLine"
-            android:layout_width="87dp"
-            android:layout_marginStart="285dp"
-            android:layout_height="115dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:background="@color/white" />
 
-    </androidx.cardview.widget.CardView>
+    <!--        <androidx.appcompat.widget.AppCompatImageView-->
+    <!--            android:id="@+id/galleryListViewSecondLine"-->
+    <!--            android:layout_width="87dp"-->
+    <!--            android:layout_marginStart="95dp"-->
+    <!--            android:layout_height="115dp"-->
+    <!--            android:layout_marginTop="10dp"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            tools:background="@color/white" />-->
+
+    <!--        <androidx.appcompat.widget.AppCompatImageView-->
+    <!--            android:id="@+id/galleryListViewThirdLine"-->
+    <!--            android:layout_width="87dp"-->
+    <!--            android:layout_marginStart="190dp"-->
+    <!--            android:layout_height="115dp"-->
+    <!--            android:layout_marginTop="10dp"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            tools:background="@color/white" />-->
+
+    <!--        <androidx.appcompat.widget.AppCompatImageView-->
+    <!--            android:id="@+id/galleryListViewFourthLine"-->
+    <!--            android:layout_width="87dp"-->
+    <!--            android:layout_marginStart="285dp"-->
+    <!--            android:layout_height="115dp"-->
+    <!--            android:layout_marginTop="10dp"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            tools:background="@color/white" />-->
+
+    <!--    </androidx.cardview.widget.CardView>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

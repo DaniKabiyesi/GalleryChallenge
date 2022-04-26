@@ -1,7 +1,7 @@
 package com.studying.imgurchallenge.repositories
 
-import com.studying.imgurchallenge.model.CatsImagesResponse
+import com.studying.imgurchallenge.model.DataResponse
 
 interface IGalleryRepository {
-    suspend fun getImage (link: String) : CatsImagesResponse
+    suspend fun getImage () : DataResponse
 }
