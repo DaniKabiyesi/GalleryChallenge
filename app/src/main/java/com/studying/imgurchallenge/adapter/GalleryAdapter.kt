@@ -1,18 +1,17 @@
 package com.studying.imgurchallenge.adapter
 
 import android.content.Context
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.studying.imgurchallenge.R
 import com.studying.imgurchallenge.extensions.inflate
-import com.studying.imgurchallenge.model.Images
+import com.studying.imgurchallenge.model.CatsImagesResponse
 
 class GalleryAdapter(
     private val context: Context,
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var galleryList: MutableList<Images> = mutableListOf()
+    private var galleryList: MutableList<CatsImagesResponse> = mutableListOf()
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -22,7 +21,7 @@ class GalleryAdapter(
         return GalleryViewHolder(view)
     }
 
-    fun populateAdapter(itemsList: MutableList<Images>){
+    fun populateAdapter(itemsList: MutableList<CatsImagesResponse>){
         galleryList.clear()
         galleryList = itemsList
         notifyItemRangeInserted(0, itemsList.size)
@@ -38,7 +37,7 @@ class GalleryAdapter(
         return galleryList.size
     }
 
-    private fun bindItemViewHolder(viewHolder: GalleryViewHolder, item: Images, position: Int){
+    private fun bindItemViewHolder(viewHolder: GalleryViewHolder, item: CatsImagesResponse, position: Int){
 
         viewHolder.galleryList.setImageResource(R.drawable.ic_launcher_background)
 

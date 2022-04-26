@@ -1,6 +1,6 @@
 package com.studying.imgurchallenge.model
 
-data class Images(
+data class CatsImagesResponse(
     val link: String
 ) {
 
