@@ -3,35 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="19dp"
     tools:background="@color/black">
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:columnCount="4"
-        >
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/galleryListViewSecondLine"
-                android:layout_width="87dp"
-                android:layout_height="115dp"
-                tools:background="@color/white"
-
-                    />
-
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/galleryListViewFirstLine"
-            android:layout_width="87dp"
-            android:layout_height="115dp"
-            android:layout_marginStart="20dp"
-            tools:background="@color/white" />
-
-
-    </GridLayout>
-
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/galleryListViewFirstLine"
+        android:layout_width="87dp"
+        android:layout_height="115dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/white" />
 
     <!--        <androidx.appcompat.widget.AppCompatImageView-->
     <!--            android:id="@+id/galleryListViewSecondLine"-->

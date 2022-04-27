@@ -16,6 +16,7 @@ class GalleryViewModel(private val repository: IGalleryRepository) : ViewModel()
     private val _catsImagesListErrorResponse = MutableLiveData<String>()
     val catsImagesListErrorResponse: LiveData<String> get() = _catsImagesListErrorResponse
 
+
     fun getImages(
     ) = viewModelScope.launch {
         try {
