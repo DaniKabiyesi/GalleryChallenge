@@ -8,9 +8,10 @@ import com.bumptech.glide.Glide
 import com.studying.imgurchallenge.R
 import com.studying.imgurchallenge.extensions.inflate
 import com.studying.imgurchallenge.model.Data
+import com.studying.imgurchallenge.model.MyModel
 
 class GalleryAdapter(
-    private val list: List<Data>,
+    private val list: List<MyModel>,
     private val context: Context,
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -35,10 +36,10 @@ class GalleryAdapter(
         return list.size
     }
 
-    private fun bindItemViewHolder(viewHolder: GalleryViewHolder, entity: Data) {
-        Log.i("test", "${entity.link}")
+    private fun bindItemViewHolder(viewHolder: GalleryViewHolder, entity: MyModel) {
+        Log.i("test", "${entity.myLink}")
         Glide.with(context)
-            .load("https://i.imgur.com/Qc6nmvb.jpg")
+            .load("${entity.myLink}")
             .placeholder(R.drawable.ic_launcher_background)
             .error(R.drawable.ic_launcher_background)
             .into(viewHolder.imageGallery)

@@ -6,5 +6,5 @@ data class Data(
     val id: String,
     val title: String,
     val link: String,
-    val images: List<com.studying.imgurchallenge.model.Image>,
+    val images: List<com.studying.imgurchallenge.model.Image>? = null,
 )

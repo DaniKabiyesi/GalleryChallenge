@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.studying.imgurchallenge.adapter.GalleryAdapter
 import com.studying.imgurchallenge.databinding.ActivityGalleryBinding
 import com.studying.imgurchallenge.model.Data
+import com.studying.imgurchallenge.model.MyModel
 import com.studying.imgurchallenge.viewmodel.GalleryViewModel
 import com.studying.imgurchallenge.viewmodel.GalleryViewModelFactory
 
@@ -35,7 +36,7 @@ class GalleryActivity : AppCompatActivity() {
 
     }
 
-    private fun setUpRecyclerView(list: List<Data>) {
+    private fun setUpRecyclerView(list: List<MyModel>) {
         mAdapter = GalleryAdapter(list, this)
         binding.galleryRecyclerView.apply {
             adapter = mAdapter
