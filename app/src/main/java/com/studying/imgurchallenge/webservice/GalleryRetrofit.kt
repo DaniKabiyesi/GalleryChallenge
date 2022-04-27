@@ -12,7 +12,6 @@ class GalleryRetrofit {
         fun getGalleryRetrofit(): Retrofit {
             return Retrofit.Builder()
                 .baseUrl("https://api.imgur.com")
-//                .callFactory(OkHttpClient.Builder().build())
                 .addConverterFactory(GsonConverterFactory.create()).client(
                     OkHttpClient().newBuilder()
                         .connectTimeout(30, TimeUnit.SECONDS)
@@ -23,6 +22,6 @@ class GalleryRetrofit {
                 .build()
         }
 
-        val create = getGalleryRetrofit().create(ImagesService::class.java)
+        val create: ImagesService = getGalleryRetrofit().create(ImagesService::class.java)
     }
 }

@@ -1,21 +1,17 @@
 package com.studying.imgurchallenge.adapter
 
 import android.content.Context
-import android.util.Log
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.studying.imgurchallenge.R
 import com.studying.imgurchallenge.extensions.inflate
-import com.studying.imgurchallenge.model.Data
 import com.studying.imgurchallenge.model.MyModel
 
 class GalleryAdapter(
     private val list: List<MyModel>,
     private val context: Context,
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-
-//    private var galleryList: List<MyModel> = mutableListOf()
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -24,7 +20,6 @@ class GalleryAdapter(
         val view = parent.inflate(R.layout.gallery_list)
         return GalleryViewHolder(view)
     }
-
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val itemViewHolder = holder as GalleryViewHolder
@@ -37,13 +32,11 @@ class GalleryAdapter(
     }
 
     private fun bindItemViewHolder(viewHolder: GalleryViewHolder, entity: MyModel) {
-        Log.i("test", "${entity.myLink}")
         Glide.with(context)
-            .load("${entity.myLink}")
-            .placeholder(R.drawable.ic_launcher_background)
-            .error(R.drawable.ic_launcher_background)
+            .load(entity.myLink)
+            .placeholder(R.drawable.placeholder_image)
+            .error(R.drawable.placeholder_error)
             .into(viewHolder.imageGallery)
-
     }
 
 
