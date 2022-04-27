@@ -9,7 +9,6 @@ import com.studying.imgurchallenge.webservice.ImagesService
 class GalleryViewModelFactory() : ViewModelProvider.Factory {
 
     //ViewModelFactory implementation to instantiate and return ViewModel
-
     private val retrofitService = GalleryRetrofit.getGalleryRetrofit()
 
     override fun <T : ViewModel> create(modelClass: Class<T>) : T {

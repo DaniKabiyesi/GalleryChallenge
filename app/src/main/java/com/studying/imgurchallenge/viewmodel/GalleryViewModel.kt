@@ -8,8 +8,10 @@ import com.studying.imgurchallenge.model.MyModel
 import com.studying.imgurchallenge.repositories.IGalleryRepository
 import kotlinx.coroutines.launch
 
+//This ViewModel is designed to store and manage UI
 class GalleryViewModel(private val repository: IGalleryRepository) : ViewModel() {
 
+    //MutableLiveData and LiveData variables
     private val _catsImagesList = MutableLiveData<List<MyModel>>()
     val catsImagesList: LiveData<List<MyModel>> get() = _catsImagesList
 
@@ -35,6 +37,7 @@ class GalleryViewModel(private val repository: IGalleryRepository) : ViewModel()
             }
             _catsImagesList.postValue(myModel)
         } catch (error: Exception) {
+            //Response from getImage() with message error
             _catsImagesListErrorResponse.value = error.toString()
         }
     }

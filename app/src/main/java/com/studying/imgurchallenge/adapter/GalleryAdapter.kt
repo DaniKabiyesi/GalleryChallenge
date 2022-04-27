@@ -13,6 +13,7 @@ class GalleryAdapter(
     private val context: Context,
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
+    //This is my adapter's implementation
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int,
