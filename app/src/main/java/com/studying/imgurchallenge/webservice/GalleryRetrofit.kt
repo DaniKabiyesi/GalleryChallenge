@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit
 class GalleryRetrofit {
 
     companion object {
+        //Retrofit implementation
         fun getGalleryRetrofit(): Retrofit {
             return Retrofit.Builder()
                 .baseUrl("https://api.imgur.com")

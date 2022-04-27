@@ -18,9 +18,11 @@ class GalleryViewModel(private val repository: IGalleryRepository) : ViewModel()
 
     fun getImages(
     ) = viewModelScope.launch {
+        //Response from getImage() with CoroutinesScope implementation
         try {
             val response = repository.getImage()
             val myModel = response.data.map { data ->
+                //Validation to get a nullable value or data images
                 if (data.images?.get(0)?.link?.isEmpty() == true) {
                     MyModel(
                         myLink = ""

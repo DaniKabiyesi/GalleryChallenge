@@ -23,6 +23,7 @@ class GalleryActivity : AppCompatActivity() {
         binding = ActivityGalleryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //ViewModel instantiated
         viewModel =
             ViewModelProvider(this, GalleryViewModelFactory()).get(GalleryViewModel::class.java)
         setObservers()
@@ -32,21 +33,23 @@ class GalleryActivity : AppCompatActivity() {
     }
 
     private fun setUpRecyclerView(list: List<MyModel>) {
+        //RecyclerView Configuration and SetUp
         mAdapter = GalleryAdapter(list, this)
         binding.galleryRecyclerView.apply {
             adapter = mAdapter
             adapter?.notifyDataSetChanged()
             layoutManager = LinearLayoutManager(context)
-
         }
     }
 
     private fun setObservers() {
+        //Method to observe api response succeed from ViewModel
         viewModel.catsImagesList.observe(this, Observer {
             setUpRecyclerView(it)
 
         })
 
+        //Method to observe api response error from ViewModel
         viewModel.catsImagesListErrorResponse.observe(this) {
             Toast.makeText(this, "error", Toast.LENGTH_SHORT).show()
         }

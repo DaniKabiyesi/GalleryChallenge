@@ -32,6 +32,7 @@ class GalleryAdapter(
     }
 
     private fun bindItemViewHolder(viewHolder: GalleryViewHolder, entity: MyModel) {
+        //Glide implementation
         Glide.with(context)
             .load(entity.myLink)
             .placeholder(R.drawable.placeholder_image)
