@@ -8,9 +8,9 @@ GalleryChallenge
 <!-- Subtitle/Description -->
 <h4>GalleryChallenge é um aplicativo desenvolvido para um teste técnico. </h4>
   <p align="left">
-  Foi muito legal desenvolver essa app. Pude aperfeiçoar e revalidar todos os conhecimentos de arquitetura que vinha aprendendo nos últimos meses. A implementação da Api, contudo, foi um desafio. Pois tive que remodelar os dados para um banco de dados diferente dos quais já tinha trabalhado. O único problema que não consegui resolver - embora tenha tentado até o último minuto- foi apresentar as imagens nas 4 colunas. Mesmo que tenha conseguido consumir os dados e desenvolver o layout com as 4 colunas, no momento de apresentar os dados, ele apenas apresenta em uma única coluna.
+  Foi muito legal desenvolver essa app. Pude aperfeiçoar e revalidar todos os conhecimentos de arquitetura que vinha aprendendo nos últimos meses. A implementação da Api, contudo, foi um desafio. Pois tive que remodelar os dados para um banco de dados diferente dos quais já tinha trabalhado.
   </p>
-  <img  width="20%"  src="https://i.imgur.com/lR9VeJK.jpg">
+  <img  width="20%"  src="https://i.imgur.com/vm32g1h.jpg">
 <p>
   
   
