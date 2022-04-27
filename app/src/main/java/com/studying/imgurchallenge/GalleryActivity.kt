@@ -1,11 +1,14 @@
 package com.studying.imgurchallenge
 
+import android.icu.lang.UCharacter
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView.VERTICAL
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.studying.imgurchallenge.adapter.GalleryAdapter
 import com.studying.imgurchallenge.databinding.ActivityGalleryBinding
 import com.studying.imgurchallenge.model.MyModel
@@ -38,7 +41,7 @@ class GalleryActivity : AppCompatActivity() {
         binding.galleryRecyclerView.apply {
             adapter = mAdapter
             adapter?.notifyDataSetChanged()
-            layoutManager = LinearLayoutManager(context)
+            layoutManager = StaggeredGridLayoutManager(4, VERTICAL)
         }
     }
 
